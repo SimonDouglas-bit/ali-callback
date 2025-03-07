@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<script>
+// Fake OAuth handler (not actually needed for your script)
+if(window.location.hash) {
+    const params = new URLSearchParams(window.location.hash.substring(1));
+    if(params.get('access_token')) {
+        document.body.innerHTML = '<h1>Auth Success!</h1>';
+    }
+}
+</script>
+<head>
+    <title>AliExpress Callback</title>
+</head>
+<body>
+    <h1>API Callback Handler</h1>
+    <p>This page exists solely for AliExpress API validation</p>
+</body>
+</html>
