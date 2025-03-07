@@ -1,19 +1,81 @@
 <!DOCTYPE html>
-<html>
-<script>
-// Fake OAuth handler (not actually needed for your script)
-if(window.location.hash) {
-    const params = new URLSearchParams(window.location.hash.substring(1));
-    if(params.get('access_token')) {
-        document.body.innerHTML = '<h1>Auth Success!</h1>';
-    }
-}
-</script>
+<html lang="en">
 <head>
-    <title>AliExpress Callback</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AliDeals Finder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #1890ff;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 1rem;
+            display: block;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            margin-top: 0;
+        }
+        .feature {
+            margin-bottom: 2rem;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #f0f0f0;
+            margin-top: 2rem;
+        }
+    </style>
 </head>
 <body>
-    <h1>API Callback Handler</h1>
-    <p>This page exists solely for AliExpress API validation</p>
+    <header>
+        <img src="logo.png" alt="AliDeals Finder Logo" class="logo">
+        <h1>AliDeals Finder</h1>
+    </header>
+    
+    <div class="container">
+        <section class="feature">
+            <h2>About AliDeals Finder</h2>
+            <p>AliDeals Finder is a curated shopping assistant that helps consumers discover high-quality, discounted products from AliExpress. We identify top-rated items with significant discounts and share them with interested shoppers.</p>
+        </section>
+
+        <section class="feature">
+            <h2>How It Works</h2>
+            <p>Our platform carefully filters products based on customer ratings, review counts, and discount percentages to ensure we only recommend the best deals. We then share these handpicked items through our social media channels to help shoppers find great value.</p>
+        </section>
+
+        <section class="feature">
+            <h2>Our Mission</h2>
+            <p>Our goal is to connect quality AliExpress products with motivated buyers looking for great value. We help shoppers discover products they love while helping sellers increase their sales.</p>
+        </section>
+        
+        <section class="feature">
+            <h2>API Integration</h2>
+            <p>This page serves as a callback URL for our AliExpress Affiliate API integration. If you've been redirected here during the authentication process, you can now return to the application.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 AliDeals Finder. All rights reserved.</p>
+    </footer>
 </body>
 </html>
